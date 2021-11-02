@@ -1,0 +1,299 @@
+:root {
+    --navbar-height:34px;
+    --header-height:120px;
+    --header-search-height: calc(var(--header-height) - var(--navbar-height))
+}
+
+body {
+    margin:0px;
+}
+
+.header {
+    height: var(--header-height);
+}
+
+.header__navrow,
+.header__search {
+    display: flex;
+    margin: auto;
+}
+
+.header__navrow {
+    background-color: #EFEFEF;
+    height: var(--navbar-height);
+}
+
+.header__navbar {
+    display:inline-flex;
+    justify-content: space-between;
+    width:1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header__navbar-list{
+    list-style: none;
+    display:flex;
+    padding-left:0px;
+    margin: 4px 0 0 0;
+}
+
+.header__navbar-item {
+    margin: 8px 8px 8px 20px;
+}
+
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+}
+
+.fas {
+    margin-right: 8px;;
+    color: #838383;
+}
+
+/* header seach row */
+
+.header__search {
+    display:flex;
+    height: var(--header-search-height);
+    max-width: 100%;
+    align-items: center;
+}
+
+.header__logo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height:100%;
+}
+
+.header__logo-img {
+    width: 175px;
+    height:70px;
+}
+
+.search__searchbox {
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.search__opts {
+    display: flex;
+    padding: 0 15px;
+    margin-left: 5px;
+}
+
+.search__opts__item {
+    margin-left: 10px;
+}
+
+.searchrow__icon {
+    font-size: 1rem;
+    border: 1px solid #3d8dc9;
+    border-radius: 50px;
+    color:#3d8dc9;
+    padding: 10px;
+}
+
+.searchbox__input {
+    width: 80%;
+    height: 100%;
+    border: 1px solid #3d8dc9;
+    border-radius: 5px;
+    outline: none;
+    font-size: 12px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.btn__search {
+    width: auto;
+    height: 34px;
+    right: 0;
+    background-color: #3d8dc9;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* app_container */
+
+.app__container{
+    background-color: #EFEFEF;
+    height: 100%;
+}
+
+.topbar {
+    background-color: #3d8dc9;
+    width: 100%;
+}
+
+.topbar__row{
+    height: 40px;
+}
+
+.topbar__item{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+
+.topbar__button {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffd80d;
+}
+
+.topbar__button-left{
+    margin-left: 15px;
+}
+
+.topbar__category-list{
+    list-style: none;
+    display: flex;
+}
+
+.topbar__category-item {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    margin-left: 35px;
+}
+
+.category-item--link {
+    text-decoration: none;
+    color: white;
+}
+
+.category {
+    display:block;
+    background-color: white;
+}
+
+.category-list {
+    margin-top: 0px;
+    padding-left: 15px;
+}
+
+.category-item{
+    list-style: none;
+}
+
+.category-item>a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.category-item:hover {
+   background-color: #3d8dc9;
+}
+
+.category__heading {
+    font-size: 14px;
+    color: #ffd80d;
+}
+
+.category__heading-icon {
+    color: white;
+    font-size: 14px;
+}
+
+.category-list li a { 
+    position: relative;
+    padding-left: 40px;
+} 
+
+.category-list>li>a {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.category-list>li>a::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 13px;
+    top: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+}
+
+.category-list>li>a:hover::after {
+    display: block;
+}
+
+.category-list>li>a::after {
+    display: none;
+    z-index: 100;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    height: 0;
+    margin: auto;
+    border-top: 17px solid transparent;
+    border-left: 17px solid #3d8dc9;
+    border-bottom: 17px solid transparent;
+    border-right: 17px solid transparent;
+}
+
+.category-list>li:nth-child(1) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-1.svg");
+}
+
+.category-list>li:nth-child(2) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-2.svg");
+}
+  
+.category-list>li:nth-child(3) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-3.svg");
+}
+
+.category-list>li:nth-child(4) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-4.svg");
+}
+.category-list>li:nth-child(5) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-5.svg");
+}
+.category-list>li:nth-child(6) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-6.svg");
+}
+.category-list>li:nth-child(7) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-7.svg");
+}
+.category-list>li:nth-child(8) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-8.svg");
+}
+.category-list>li:nth-child(9) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-9.svg");
+}
+.category-list>li:nth-child(10) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-10.svg");
+}
+
+.category-list>li:nth-child(11) a::before {
+    background-image: url("https://vuhoangtelecom.vn/wp-content/themes/vuhoangtelecom/assets/menu-icon-11.svg");
+}
