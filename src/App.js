@@ -1,14 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './component/HomePage.js';
+import Login from './component/LoginPage.js';
+import Users from './component/UserPage.js';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <div></div>
-      <img src={logo} alt="hello" width="200" height="200"></img>
-    </div>
+    <Router>
+      <div>
+        {/* <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav> */}
+
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
