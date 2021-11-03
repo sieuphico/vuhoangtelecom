@@ -12,22 +12,7 @@ import Users from './component/UserPage.js';
 export default function App() {
   return (
     <Router>
-      <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav> */}
-
-        <Switch>
+            <Switch>
           <Route path="/login">
             <Login />
           </Route>
@@ -38,7 +23,6 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
     </Router>
   );
 }
