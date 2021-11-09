@@ -3,13 +3,17 @@ import {
     BrowserRouter as Router,
     Link
 } from 'react-router-dom';
-import Navbar from '../component/header/Navbar.js'
+import Navbar from './Navbar'
+import TopContainer from './TopContainer.js'
 
 
 class Home extends Component {
     render() {
         return (
-           <Navbar></Navbar>
+            <div class="app">
+                <Navbar></Navbar>
+                <TopContainer/>
+            </div>
         );
     }
 }

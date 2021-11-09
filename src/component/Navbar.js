@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from '../../logo.svg';
+import logo from '../logo.svg';
 import {
     BrowserRouter as Router,
     Link
@@ -85,7 +85,6 @@ export default function Navbar() {
                 </div>
             </div>
         </div>
-
     </header>
     );
 }
